@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/row_emp_image"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row_emp_name"
+            tools:text="Sabbir Rahman"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_toEndOf="@id/row_emp_image"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row_emp_dept"
+            tools:text="Administration"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_toEndOf="@id/row_emp_image"
+            android:layout_below="@id/row_emp_name"
+            android:textSize="14sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/row_emp_mobile"
+            tools:text="01711223344"
+            android:drawableLeft="@android:drawable/ic_menu_call"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_toEndOf="@id/row_emp_image"
+            android:layout_below="@id/row_emp_dept"
+            android:textSize="14sp"/>
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/row_emp_menu"
+            android:text="@string/menu_icon"
+            android:textStyle="bold"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:textSize="25sp"
+            android:textColor="#000"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

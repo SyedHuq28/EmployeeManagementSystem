@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bitm.android.employeemanagementsystem.controller.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_employeeDashboard"
+            app:destination="@id/employeeDashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.bitm.android.employeemanagementsystem.controller.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_newEmployeeFragment"
+            app:destination="@id/newEmployeeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_employeeListFragment"
+            app:destination="@id/employeeListFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/newEmployeeFragment"
+        android:name="com.bitm.android.employeemanagementsystem.controller.NewEmployeeFragment"
+        android:label="fragment_new_employee"
+        tools:layout="@layout/fragment_new_employee" />
+    <fragment
+        android:id="@+id/employeeListFragment"
+        android:name="com.bitm.android.employeemanagementsystem.controller.EmployeeListFragment"
+        android:label="fragment_employee_list"
+        tools:layout="@layout/fragment_employee_list" >
+        <action
+            android:id="@+id/action_employeeListFragment_to_employeeDetailsFragment"
+            app:destination="@id/employeeDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_employeeListFragment_to_newEmployeeFragment"
+            app:destination="@id/newEmployeeFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeDetailsFragment"
+        android:name="com.bitm.android.employeemanagementsystem.controller.EmployeeDetailsFragment"
+        android:label="fragment_employee_details"
+        tools:layout="@layout/fragment_employee_details" />
+    <fragment
+        android:id="@+id/employeeDashboard"
+        android:name="com.bitm.android.employeemanagementsystem.controller.EmployeeDashboard"
+        android:label="fragment_employee_dashboard"
+        tools:layout="@layout/fragment_employee_dashboard" >
+        <action
+            android:id="@+id/action_employeeDashboard_to_employeeListFragment"
+            app:destination="@id/employeeListFragment" />
+    </fragment>
+</navigation>
